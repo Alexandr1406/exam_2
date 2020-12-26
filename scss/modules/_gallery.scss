@@ -1,0 +1,39 @@
+.gallery {
+    padding-top: 180px;
+    text-align: center;
+
+    &__title {
+        font-family: $bold;
+        font-size: 44px;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 170px;
+
+        &::before {
+            @include size(100px, 1px);
+            @include pos($t: -40px, $l:45%);
+            background-color: #000;
+            content: '';
+        }        
+    }
+
+    &__wrap {
+       display: flex;
+       
+    }
+
+    &__container {
+        min-width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        overflow: hidden;
+        
+
+        &--big {
+            min-width: 50%;
+        }
+    }
+}

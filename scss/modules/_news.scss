@@ -1,0 +1,104 @@
+.news {
+    background-image: url(../images/bg-news.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 180px;
+    text-align: center;
+    padding-bottom: 1px;
+
+    &__title {
+        color: #fff;
+        font-family: $bold;
+        font-size: 44px;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 100px;
+
+        &::before {
+            @include size(100px, 1px);
+            @include pos($t: -40px, $l:45%);
+            background-color: #fff;
+            content: '';
+        }        
+    }
+
+    &__block {
+        background-color: #fff;
+        overflow: hidden;
+        margin-bottom: 60px;
+        
+    }
+
+    &__img {
+        margin-bottom: 10px;
+    }
+
+    &__info {
+        margin: 20px;
+        text-align: left;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+
+        &--title {
+            font-family: $bold;
+            line-height: 34px;
+            text-transform: uppercase;
+            color: #2c4058;
+        }
+
+        &--text {
+            font-size: 16px;
+            font-family: $sans;
+            line-height: 30px;
+            color: #4b5562;
+            margin-bottom: 35px;
+            flex-grow: 1;
+        }
+    }
+
+    &__author {
+        display: flex;
+
+        &--avatar {
+            @include size(60px);
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 20px;
+            font-family: $book;
+        }
+
+        &--name {
+            font-size: 18px;
+            color: #2c4058;
+            margin-bottom: 15px;
+        }
+
+        &--date {
+            font-size: 14px;
+            color: #55b7ff;
+        }
+    }
+
+    &__slider {
+        margin-bottom: 140px;
+
+        &--list {
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        &--item {
+            @include size(15px);
+            border: 1px solid;
+            border-radius: 50%;
+            color: #fff;
+            margin: 0 20px 0;
+        }
+
+        &--active {
+            background-color: #fff;
+        }
+    }
+}
